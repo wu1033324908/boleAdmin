@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 首页
+            <span class="c-gray en">&gt;</span>学生管理
+            <span class="c-gray en">&gt;</span> 学生操作手册
+            <a class="btn btn-primary r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="module-wrap">
+                <div class="search-container"></div>
+            </div>
+
+            <!-- 工具栏 -->
+            <!-- <div class="module-wrap">
+                <div class="tool-container">
+                    <button type="button" class="btn-add btn btn-primary">
+                        <i class="fa fa-plus"></i> 添加</button>
+                </div>
+            </div> -->
+
+            <!-- 表格 -->
+            <div class="module-wrap">
+                <div class="table-container">
+                    <table class="" id="table" width="100%">
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- 添加模块 -->
+            <div id="add-module" class="layer-content-molude">
+                <form class="layui-form">
+                    
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">充值详情</label>
+                        <div class="col col-sm-10" style="z-index: 1;">
+                            <div id="editor"></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item form-footer">
+                        <label class="col col-sm-2 label-control"></label>
+                        <div class="col col-sm-10">
+                            <button type="button" class="btn btn-primary" lay-submit lay-filter="add">立即提交</button>
+                            <button type="reset" class="btn btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- 修改 -->
+            <div id="modify-module" class="layer-content-molude">
+                <form class="layui-form">
+                    
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">充值详情</label>
+                        <div class="col col-sm-10">
+                            <div id="editor1"></div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item form-footer">
+                        <label class="col col-sm-2 label-control"></label>
+                        <div class="col col-sm-10">
+                            <button type="button" class="btn btn-primary" lay-submit lay-filter="modify">立即提交</button>
+                            <button type="reset" class="btn btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 上传文件 -->
+            <div id="upload-module" class="layer-content-molude">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">文件上传</label>
+                        <div class="col col-sm-10">
+                            <div id="uploader">
+                                <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+                <% @@include="../includes/script-file-upload.html" %>
+                    <script src="@PATH@lib/base64/base64.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/student-operation.js?version=@VERSION@"></script>
+    </body>
+
+</html>

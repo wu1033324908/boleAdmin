@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 子管理员管理
+            <span class="c-gray en">&gt;</span> 子管理员列表
+            <a class="btn btn-primary r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="module-wrap">
+                <div class="table-search-container">
+                    <form class="clearfix">
+                        <div class="form-group">
+                            <label for="exampleInputName2">搜索：</label>
+                        </div>
+                        <div class="form-group">
+                            <select name="searchSelect">
+                                <option value="">全部</option>
+                                <option value="Phone">手机号</option>
+                                <option value="NickName">昵称</option>
+                                <option value="RoleName">权限</option>
+                                <option value="CreatedAt">创建时间</option>
+                            </select>
+                        </div>
+                        <div class="search-input-box change-box form-group hidden">
+                            <input type="text" name="searchValue" placeholder="搜索内容" />
+                        </div>
+                        <div class="datetime-box change-box form-group hidden">
+                            <input id="start-datetime" name="start" data-layuidate="date" placeholder="开始时间" />
+                            <input id="end-datetime" name="end" data-layuidate="date" placeholder="结束时间" />
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="isSearchLike" /> 精准搜索
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="searchInResult" /> 在结果中搜索
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary serach-btn">搜索</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 表格 -->
+            <div class="module-wrap">
+                <div class="table-container">
+                    <table class="" id="table" width="100%">
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- 详情 -->
+            <div id="desc-module" class="layer-content-molude">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">手机号</label>
+                        <div class="col col-sm-10">
+                            <input type="text" name="Phone" disabled class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">权限</label>
+                        <div class="col col-sm-10">
+                            <input type="text" name="RoleName" disabled class="layui-input">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div id="set-permission" class="layer-content-molude">
+                <form class="layui-form">
+                    <!-- <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">设置列表</label>
+                        <div class="col col-sm-10">
+                            <select name="permission" lay-filter="permission" lay-verify="required">
+                                <option value="">请选择</option>
+                                <option value="">首页管理</option>
+                                <option value="">课程管理</option>
+                                <option value="">教师管理</option>
+                                <option value="">学生管理</option>
+                                <option value="">百分榜管理</option>
+                                <option value="">课时管理</option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">首页管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isHome" lay-filter="isHome" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">课程管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isCourse" lay-filter="isCourse" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">教师管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isTeacger" lay-filter="isTeacger" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">学生管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isStudent" lay-filter="isStudent" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">百分榜管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isHundred" lay-filter="isHundred" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">课时管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isHour" lay-filter="isHour" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">充值管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isRecharge" lay-filter="isRecharge" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">页面底部管理</label>
+                        <div class="col col-sm-5">
+                            <input type="checkbox" name="isBottom" lay-filter="isBottom" lay-skin="switch" lay-text="开启|关闭" value="1">
+                        </div>
+                    </div>
+                    <div class="layui-form-item form-footer">
+                        <label class="col col-sm-2 label-control"></label>
+                        <div class="col col-sm-10">
+                            <button type="button" class="btn btn-primary" id="btn-submit-role">提交</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+                <% @@include="../includes/script-file-upload.html" %>
+                    <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/admin-passed-check.js?version=@VERSION@"></script>
+    </body>
+
+</html>

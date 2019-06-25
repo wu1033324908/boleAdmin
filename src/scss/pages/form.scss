@@ -1,0 +1,76 @@
+form {
+    padding-top: 20px;
+    .input-text {
+        padding: 7px;
+    }
+    .img-box {
+        min-height: 20px;
+        padding: 7px;
+        border: 1px solid #ddd;
+        .item {
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-top: 10px;
+            .btn-close-origin {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 15px;
+                width: 15px;
+                line-height: 12px;
+                font-size: 12px;
+                text-align: center;
+                color: #fff;
+                background-color: rgb(189, 67, 67);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+        img {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    .plaint-text-box {
+        .item {
+            position: relative;
+            float: left;
+            margin-right: 20px;
+            margin-top: 10px;
+            .btn-close-origin {
+                position: absolute;
+                right: 0;
+                top: 0;
+                height: 15px;
+                width: 15px;
+                line-height: 12px;
+                font-size: 12px;
+                text-align: center;
+                color: #fff;
+                background-color: rgb(189, 67, 67);
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+    .form-plain-text {
+        display: inline-block;
+        height: 38px;
+        line-height: 38px;
+    }
+    .label-control {
+        text-align: end;
+        height: 38px;
+        line-height: 38px;
+    }
+    .form-append-input {
+        .layui-form-item {
+            &:first-child {
+                .btn-remove-phrase {
+                    display: none;
+                }
+            }
+        }
+    }
+}

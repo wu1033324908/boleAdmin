@@ -1,0 +1,107 @@
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+}
+
+body,
+th,
+td,
+button,
+input,
+select,
+textarea {
+    font-size: 14px;
+}
+
+
+/* 模块的外层 */
+
+.module-wrap {
+    font-size: 14px;
+    margin: 22px 0;
+}
+
+
+/* 表格上的工具栏 */
+
+.tool-container {
+    background-color: #f5fafe;
+    margin: 10px 0; 
+    padding: 10px;
+    border: 1px solid #eee;
+}
+
+.btn {
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-default {
+    background-color: #fff;
+    &:hover {
+        background-color: darken(#fff, 5%);
+    }
+}
+
+
+/* new */
+
+.clearfix::before,
+.clearfix::after {
+    overflow: hidden;
+    display: table;
+    visibility: hidden;
+    content: '';
+    clear: both;
+}
+
+
+/* new clearfix */
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+
+/* layer 加载层,在layer下打开时，才能显示*/
+
+.layer-content-molude {
+    display: none;
+}
+
+.layui-layer {
+    .layer-content-molude {
+        display: block;
+    }
+}
+
+.show_resource_in_browser{
+    cursor: pointer;
+    position: relative;
+    margin-right: 20px;
+
+    &.origin-link {
+        word-break: break-all;
+        display: inline-block;
+        height: 38px;
+        line-height: 38px;
+    }
+    &.origin-image {
+        max-height: 150px;
+        max-width: 400px;
+    }
+    &:hover {
+        color: #0a64da;
+        text-decoration: underline;
+    }
+}
+
+@import "login.scss";
+@import "datatables.scss";
+@import "form.scss";
+@import "colorpicker.scss";
+@import "image-show-list.scss";
+@import "table-search.scss";

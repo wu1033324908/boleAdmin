@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 课程管理
+            <span class="c-gray en">&gt;</span> 课程设置
+            <a class="btn btn-primary r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="module-wrap">
+                <div class="search-container"></div>
+
+            </div>
+
+            <!-- 表格 -->
+            <div class="module-wrap">
+                <div id="">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">成语闪卡速度(秒/张)</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="flashsepeed" class="layui-input" value="0.75" lay-verify="number" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">成语闪卡次数</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="flashrepeatedly" class="layui-input" value="3" lay-verify="number" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">成语抓小偷速度(秒/张)</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="thiefsepeed" class="layui-input" value="0.75" lay-verify="number" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="display: none;">
+                            <label class="col col-sm-3 label-control">成语抓小偷次数</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="thiefrepeatedly" class="layui-input" value="3" lay-verify="number" autocomplete="off" value="1">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">成语抓小偷分数</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="thiefgrade" class="layui-input" value="3" lay-verify="number" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">贴图时间</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="puzzleduration" class="layui-input" id="jigsaw-time" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">贴图分数</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="puzzlegtade" class="layui-input" value="3" lay-verify="number" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">激励后贴图的分数</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="stimulategrade" class="layui-input" value="2" lay-verify="number" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="display: none">
+                            <label class="col col-sm-3 label-control">写作的时间</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="artideduration" class="layui-input" id="writing-time" autocomplete="off" value="00:20:00">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="display: none">
+                            <label class="col col-sm-3 label-control">写作的分数</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="artidegtade" class="layui-input" value="3" lay-verify="number" autocomplete="off" value="0">
+                            </div>
+                        </div>
+                        <div class="layui-form-item form-footer">
+                            <label class="col col-sm-3 label-control"></label>
+                            <div class="col col-sm-9">
+                                <button type="button" class="btn btn-primary" lay-submit lay-filter="modify">立即提交</button>
+                                <button type="reset" class="btn btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+                <% @@include="../includes/script-file-upload.html" %>
+                    <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/course-global-setting.js?version=@VERSION@"></script>
+    </body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 首页管理
+            <span class="c-gray en">&gt;</span> 标题名称
+            <a class="btn btn-primary r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="module-wrap">
+                <div class="search-container"></div>
+
+            </div>
+
+            <!-- 表格 -->
+            <div class="module-wrap">
+                <div id="">
+                    <form class="layui-form">
+                        <div class="layui-form-item" style="display: none;">
+                            <label class="col col-sm-3 label-control">标题一</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="titleup" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item" style="display: none;">
+                            <label class="col col-sm-3 label-control" >标题二</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="titledown" class="layui-input">
+                            </div>
+                        </div>
+
+
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">标题一</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="middleup" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">标题二</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="middledown" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">标题三</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="videoup" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">标题四</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="videodown" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">当前二维码</label>
+                            <div class="col col-sm-5">
+                                <!-- <input type="text" name="videodown" class="layui-input"> -->
+                                <div class="re_img">
+                                    <img src="" alt="" style="height: 100px;width: 100px;">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">二维码</label>
+                            <div class="col col-sm-5">
+                                <div id="add-uploader">
+                                    <p>Your browser doesn't have Flash, Silverlight or HTML5 support.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                
+                        <div class="layui-form-item form-footer">
+                            <label class="col col-sm-3 label-control"></label>
+                            <div class="col col-sm-9">
+                                <button type="button" class="btn btn-primary" lay-submit lay-filter="modify">立即提交</button>
+                                <button type="reset" class="btn btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+                <% @@include="../includes/script-file-upload.html" %>
+                    <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/home-title.js?version=@VERSION@"></script>
+    </body>
+
+</html>

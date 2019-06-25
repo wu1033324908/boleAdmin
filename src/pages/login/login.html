@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="login-page">
+        <!-- 模块 -->
+        <div class="module-wrap login-form-wrap ">
+            <!-- 标题 -->
+            <div class="top-title-container">
+                <div class="inner">
+                    <% @@include="../includes/project-name.html" %>
+                </div>
+            </div>
+            <!-- 登录表单 -->
+            <div class="form-container">
+                <div class="inner">
+                    <!-- 使用 layui form 组件 -->
+                    <form class="layui-form" action="">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="username" required lay-verify="username" lay-verType="tips" placeholder="请输入用户名" autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="password" required lay-verify="password" lay-verType="tips" placeholder="请输入密码" autocomplete="off" class="layui-input">
+                            </div>
+                            <!-- 这里可以在input右侧显示提示信息 -->
+                            <!-- <div class="layui-form-mid layui-word-aux">辅助文字</div> -->
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">验证码</label>
+                            <div class="layui-input-block">
+                                <button type="button" class="layui-btn layui-btn-primary btn-verify" lay-verify="verify-code" lay-verType="tips" >点击生成验证码</button>
+                                <div id="verify-code-box"></div>
+                            </div>
+                        </div>
+                        <!-- <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="remember-username" title="记住用户名" lay-skin="primary">
+                            </div>
+                        </div> -->
+                        <div class="layui-form-item ">
+                            <div class="bottom-btn-group">
+                                <button type="button" class="layui-btn btn-submit" lay-submit lay-filter="login">登录</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <% @@include="../includes/script-tag.html" %>
+        <script src="@PATH@js/login.js?version=@VERSION@"></script>
+    </body>
+
+</html>

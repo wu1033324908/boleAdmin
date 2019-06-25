@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 首页
+            <span class="c-gray en">&gt;</span> 案例
+            <span class="c-gray en">&gt;</span> 富文本
+            <a class="btn btn-primary radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+
+        <div class="page-container">
+            <!-- 工具栏 -->
+            <div class="tool-container">
+                <button type="button" class="btn-add btn btn-primary radius">
+                    <i class="fa fa-plus"></i> 添加</button>
+            </div>
+        </div>
+
+
+        <div id="add-module" class="layer-content-molude">
+            <form class="layui-form">
+                <div class="layui-form-item">
+                    <label class="col col-sm-2 label-control">标题</label>
+                    <div class="col col-sm-5">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="col col-sm-2 label-control">产品内容</label>
+                    <div class="col col-sm-10">
+                        <div id="editor"></div>
+                    </div>
+                </div>
+                <div class="layui-form-item form-footer">
+                    <label class="col col-sm-2 label-control"></label>
+                    <div class="col col-sm-10">
+                        <button type="button" class="btn btn-primary" lay-submit lay-filter="formDemo">立即提交</button>
+                        <button type="reset" class="layui-btn-primary btn btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+            <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                <script src="@PATH@js/ue-editor.js?version=@VERSION@"></script>
+    </body>
+
+</html>

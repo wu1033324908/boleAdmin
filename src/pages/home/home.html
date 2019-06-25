@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<% @@include="/includes/head-tag.html" %>
+
+    <body>
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 首页
+            <span class="c-gray en">&gt;</span> 首页管理
+            <span class="c-gray en">&gt;</span> 首页管理
+            <a class="btn btn-primary radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="search-container"></div>
+
+            <!-- 工具栏 -->
+            <div class="tool-container">
+                <button type="button" class="btn-add btn btn-primary radius">
+                    <i class="fa fa-plus"></i> 添加</button>
+            </div>
+
+            <!-- 表格 -->
+            <div class="table-container">
+                <table class="" id="table" width="100%">
+                </table>
+            </div>
+            <input type="text" id="cp1">
+        </div>
+
+        <!-- 添加模块 -->
+        <div id="add-module" class="layer-content-molude">
+            <form class="layui-form form form-horizontal">
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>标题：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input class="input-text" type="text" name="title" required lay-verify="required">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>图标：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <input class="input-text"  type="text" name="icon" required lay-verify="required">
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">前景色：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <div id="front-color" class="color-block">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2">背景色：</label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <div id="back-color" class="color-block">
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row cl">
+                    <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+                        <button type="button" class="btn btn-primary" lay-submit lay-filter="add">立即提交</button>
+                        <button type="reset" class="btn btn-secondary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <% @@include="/includes/script-tag.html" %>
+            <script src="@PATH@js/home.js"></script>
+    </body>
+
+</html>

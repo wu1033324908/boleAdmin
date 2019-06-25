@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 预约管理
+            <span class="c-gray en">&gt;</span> 预约设置
+            <a class="btn btn-primary r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="module-wrap">
+                <div class="search-container"></div>
+            </div>
+
+            <!-- 表格 -->
+            <div class="module-wrap">
+                <div id="">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="col col-sm-3 label-control">每周可选次数</label>
+                            <div class="col col-sm-5">
+                                <input type="text" name="courseTimeCount" class="layui-input" lay-verify="number">
+                            </div>
+                        </div>
+                        <div class="layui-form-item form-footer">
+                            <label class="col col-sm-3 label-control"></label>
+                            <div class="col col-sm-9">
+                                <button type="button" class="btn btn-primary" lay-submit lay-filter="modify">立即提交</button>
+                                <button type="reset" class="btn btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+                <% @@include="../includes/script-file-upload.html" %>
+                    <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/class-time.js?version=@VERSION@"></script>
+    </body>
+</html>

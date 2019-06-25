@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 首页
+            <span class="c-gray en">&gt;</span> 系统管理
+            <span class="c-gray en">&gt;</span> 添加用户
+            <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="module-wrap">
+            <div class="form-container">
+                <div class="inner">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="username" required lay-verify="username" lay-verType="tips" placeholder="请输入用户名" autocomplete="off"
+                                    class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="password1" required lay-verify="password" lay-verType="tips" placeholder="请输入密码" autocomplete="off"
+                                    class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">确认密码</label>
+                            <div class="layui-input-block">
+                                <input type="password" name="password2" required lay-verify="repassword" lay-verType="tips" placeholder="请再次输入密码" autocomplete="off"
+                                    class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">手机号</label>
+                            <div class="layui-input-block">
+                                <input type="tel" name="phonenum" required lay-verify="phone" lay-verType="tips" placeholder="请输入手机号" autocomplete="off"
+                                    class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item ">
+                                <label class="layui-form-label"></label>
+                            <div class="bottom-btn-group">
+                                <button type="button" class="layui-btn btn-submit" lay-submit lay-filter="">提交</button>
+                                <button type="button" class="layui-btn btn-reset" lay-reset lay-filter="">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% @@include="../includes/script-tag.html" %>
+            <script src="@PATH@js/add-user.js?version=@VERSION@"></script>
+    </body>
+
+</html>

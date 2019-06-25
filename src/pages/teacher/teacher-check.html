@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 教师管理
+            <span class="c-gray en">&gt;</span> 教师待审核
+            <a class="btn btn-primary r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="module-wrap">
+                <div class="search-container"></div>
+
+            </div>
+
+            <!-- 工具栏 -->
+            <!-- <div class="module-wrap">
+                <div class="tool-container">
+                    <button type="button" class="btn-add btn btn-primary">
+                        <i class="fa fa-plus"></i> 添加</button>
+                </div>
+
+            </div> -->
+            <div class="module-wrap">
+                <div class="table-search-container">
+                    <form class="clearfix">
+                        <div class="form-group">
+                            <label for="exampleInputName2">搜索：</label>
+                        </div>
+                        <div class="form-group">
+                            <select name="searchSelect">
+                                <option value="">全部</option>
+                                <option value="Phone">手机号</option>
+                                <option value="CreatedAt">创建时间</option>
+                            </select>
+                        </div>
+                        <div class="search-input-box change-box form-group hidden">
+                            <input type="text" name="searchValue" placeholder="搜索内容" />
+                        </div>
+                        <div class="datetime-box change-box form-group hidden">
+                            <input id="start-datetime" name="start" data-layuidate="date" placeholder="开始时间" />
+                            <input id="end-datetime" name="end" data-layuidate="date" placeholder="结束时间" />
+                        </div>
+                        <div class="isbegin-box change-box form-group hidden">
+                            <select name="IsBegin">
+                                <option value="true">启用</option>
+                                <option value="false">未启用</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="isSearchLike" /> 精准搜索
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" name="searchInResult" /> 在结果中搜索
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary serach-btn">搜索</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- 表格 -->
+            <div class="module-wrap">
+                <div class="table-container">
+                    <table class="" id="table" width="100%">
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- 修改 -->
+            <div id="modify-module" class="layer-content-molude">
+                <form class="layui-form">
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">手机号</label>
+                        <div class="col col-sm-10">
+                            <span class="form-plain-text tel"></span>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="col col-sm-2 label-control">批改图片</label>
+                        <div class="col col-sm-10">
+                            <div class="img-box clearfix">
+                                <div class="item">
+                                    <img class="origin-image jigsaw-image show_resource_in_browser" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item form-footer">
+                        <label class="col col-sm-2 label-control"></label>
+                        <div class="col col-sm-10">
+                            <button type="button" class="btn-pass btn btn-primary">通过</button>
+                            <button type="button" class="btn-refuse btn btn-primary">拒绝</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+                <% @@include="../includes/script-file-upload.html" %>
+                    <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/teacher-check.js?version=@VERSION@"></script>
+    </body>
+
+</html>

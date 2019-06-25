@@ -1,0 +1,12 @@
+.colorpicker {
+    z-index: 99999999999999;
+}
+.color-block {
+    float: left;
+    height: 30px;
+    width: 60px;
+    border: 1px solid #eee;
+    div {
+        height: 100%;
+    }
+}

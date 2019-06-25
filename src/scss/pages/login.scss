@@ -1,0 +1,73 @@
+.login-page {
+    background: url("../assets/img/login-bg-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*表单模块*/
+    .login-form-wrap {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 0 16%;
+        /*标题*/
+        .top-title-container {
+            margin: 50px 0 0;
+            padding: 50px;
+            .inner {
+                font-size: 36px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        /* 表单*/
+        .form-container {
+            text-align: center;
+            .inner {
+                display: inline-block;
+                padding: 51px 59px 50px 0;
+                background: #fff; // max-width: 300px;
+                /* checkbox */
+                .layui-form-checkbox {
+                    float: right;
+                    span {
+                        font-size: 12px;
+                    }
+                    i {
+                        font-size: 10px;
+                    }
+                }
+                /* input block */
+                .layui-input-block {
+                    width: 200px;
+                }
+                /* 登录按钮 */
+                .bottom-btn-group {
+                    margin-top: 40px;
+                    text-align: end;
+                    button {
+                        width: 250px;
+                    }
+                }
+                /* 显示验证码的按钮 */
+                .btn-verify {
+                    display: block;
+                    width: 100%;
+                }
+                /* 验证码组件 */
+                #verify-code-box {
+                    z-index: 999;
+                    display: none;
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: #fff;
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

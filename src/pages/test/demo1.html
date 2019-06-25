@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 首页
+            <span class="c-gray en">&gt;</span> 系统管理
+            <span class="c-gray en">&gt;</span> 添加用户
+            <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="module-wrap">
+            <div class="demo1" id="demo1">
+                <div class="inner">
+                    <ul class="layui-timeline">
+                        <li class="layui-timeline-item" v-for="item in result">
+                            <i class="layui-icon layui-timeline-axis">&#xe63f;</i>
+                            <div class="layui-timeline-content layui-text">
+                                <h3 class="layui-timeline-title">{{item.TimeAt}}</h3>
+                                <p>
+                                    {{item.Description}}
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <% @@include="../includes/script-tag.html" %>
+            <script src="@PATH@js/demo1.js?version=@VERSION@"></script>
+    </body>
+
+</html>

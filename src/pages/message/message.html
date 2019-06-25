@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<% @@include="../includes/head-tag.html" %>
+
+    <body class="add-user-page">
+        <!-- 页面的路径 -->
+        <nav class="breadcrumb">
+            <i class="Hui-iconfont"></i> 首页
+            <span class="c-gray en">&gt;</span> 留言管理
+            <span class="c-gray en">&gt;</span> 留言管理
+            <a class="btn btn-primary r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);"
+                title="刷新">
+                <i class="Hui-iconfont"></i>
+            </a>
+        </nav>
+        <div class="page-container">
+            <!-- 搜索 -->
+            <div class="module-wrap">
+                <div class="search-container"></div>
+
+            </div>
+
+            <!-- 工具栏 -->
+            <div class="module-wrap">
+                <div class="tool-container">
+                    <!-- <button type="button" class="btn-add btn btn-primary">
+                        <i class="fa fa-plus"></i> 添加</button> -->
+                    <button type="button" class="btn-upload btn btn-primary">
+                        <i class="fa fa-plus"></i> 上传</button>
+                </div>
+
+            </div>
+
+            <!-- 表格 -->
+            <div class="module-wrap">
+                <div class="table-container">
+                    <table class="" id="table" width="100%">
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- 修改 -->
+            <div id="modify-module" class="layer-content-molude">
+                <form class="form form-horizontal">
+                    <div class="row clearfix">
+                        <label class="form-label col-xs-4 col-sm-2">UserName</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="text" name="UserName" class="layui-input" disabled required lay-verify="required" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <label class="form-label col-xs-4 col-sm-2">QMsg</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <textarea name="QMsg" class="layui-textarea" disabled required lay-verify="required" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <label class="form-label col-xs-4 col-sm-2">AMsg</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <textarea name="AMsg" class="layui-textarea" required lay-verify="required" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row clearfix form-footer">
+                        <label class="form-label col-xs-4 col-sm-2"></label>
+                        <div class="col col-sm-10">
+                            <button type="button" class="btn btn-primary" lay-submit lay-filter="modify">立即提交</button>
+                            <button type="reset" class="btn btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- 上传文件 -->
+            <div id="upload-module" class="layer-content-molude">
+                <form class="layui-form">
+                    <div class="row c1">
+                        <label class="form-label col-xs-4 col-sm-2">文件上传</label>
+                        <div class="col col-sm-10">
+                            <input id="fileupload" type="file" multiple>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <% @@include="../includes/script-tag.html" %>
+            <% @@include="../includes/script-ue-editor.html" %>
+                    <script src="@PATH@js/customUeEditor.js?version=@VERSION@"></script>
+                    <script src="@PATH@js/message.js?version=@VERSION@"></script>
+    </body>
+
+</html>

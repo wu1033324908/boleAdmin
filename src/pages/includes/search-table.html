@@ -1,0 +1,45 @@
+<form class="clearfix">
+    <div class="form-group">
+        <label for="exampleInputName2">搜索：</label>
+    </div>
+    <div class="form-group">
+        <select name="searchSelect">
+            <option value="null">全部</option>
+            <option value="CustomerName">企业名称</option>
+            <option value="ServiceUserName">客服</option>
+            <option value="Name">收款项目</option>
+            <option value="ContractNo">合同编号</option>
+            <option value="CreatedAt">创建时间</option>
+            <option value="DuringTime">范围时间</option>
+            <option value="Desc">备注</option>
+        </select>
+    </div>
+    <div class="search-exist-box change-box form-group hidden">
+        <input type="text" name="searchValue" placeholder="搜索内容" />
+    </div>
+    <div class="day-exist-box change-box form-group hidden">
+        <input id="start" name="start" data-layuidate="date" placeholder="开始时间" />
+        <input id="end" name="end" data-layuidate="date" placeholder="结束时间" />
+    </div>
+    <div class="record-state-box change-box form-group hidden">
+        <select name="searchRecordState" >
+            <option value="1">审核通过</option>
+            <option value="0">待审核</option>
+            <option value="2">审核未通过</option>
+            <option value="3">主动撤回</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="isSearchLike" /> 精准搜索
+        </label>
+    </div>
+    <div class="form-group">
+        <label>
+            <input type="checkbox" name="searchInResult" /> 在结果中搜索
+        </label>
+    </div>
+    <div class="form-group">
+        <button type="button" class="btn btn-primary serach-btn">搜索</button>
+    </div>
+</form>
